@@ -1,13 +1,21 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Anagrams {
 
-  public static ArrayList<String> runAnagrams(String word1, String word2) {
-    ArrayList<String> inputAnagram = new ArrayList<String>();
-    inputAnagram.add(word1);
-    inputAnagram.add(word2);
+  public static boolean runAnagrams(String words) {
+    String[] inputAnagram = words.split(" ");
+    ArrayList<String> anagramArray = new ArrayList<String>(Arrays.asList(inputAnagram));
+    char[] word1 = anagramArray.get(0).toCharArray();
+    char[] word2 = anagramArray.get(1).toCharArray();
 
-    return inputAnagram;
+    char[] sorted1 = Arrays.sort(word1);
+    char[] sorted2 = Arrays.sort(word2);
+
+    if ( sorted1.equals(sorted2) ) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 

@@ -10,6 +10,15 @@ public class AnagramsTest {
     ArrayList<String> expected = new ArrayList<String>();
     expected.add("cat");
     expected.add("act");
-    assertEquals(expected, anagramsTest.runAnagrams("cat", "act"));
+    assertEquals(expected, anagramsTest.runAnagrams("cat act"));
+  }
+
+  @Test
+  public void runAmagrams_outputArray() {
+    Anagrams anagramsTest = new Anagrams();
+    ArrayList<String> expected = new ArrayList<String>();
+    expected.add("cat");
+    expected.add("act");
+    assertEquals(expected, anagramsTest.runAnagrams("cat act"));
   }
 }
