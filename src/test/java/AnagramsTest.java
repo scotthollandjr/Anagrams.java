@@ -3,11 +3,13 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 
 public class AnagramsTest {
+
   @Test
-  public void runAmagrams_receiveInput() {
+  public void runAmagrams_outputArray() {
     Anagrams anagramsTest = new Anagrams();
     ArrayList<String> expected = new ArrayList<String>();
-    assertEquals(true, anagramsTest.runAnagrams("cat", "act"));
+    expected.add("cat");
+    expected.add("act");
+    assertEquals(expected, anagramsTest.runAnagrams("cat", "act"));
   }
-
 }

@@ -2,10 +2,12 @@ import java.util.ArrayList;
 
 public class Anagrams {
 
-  public static boolean runAnagrams(String word1, String word2) {
+  public static ArrayList<String> runAnagrams(String word1, String word2) {
     ArrayList<String> inputAnagram = new ArrayList<String>();
+    inputAnagram.add(word1);
+    inputAnagram.add(word2);
 
-    return true;
+    return inputAnagram;
   }
 }
 
